@@ -25,4 +25,4 @@ jobs:
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.run-script.outputs.message }}"
+        run: echo "${{ env.message }}"
