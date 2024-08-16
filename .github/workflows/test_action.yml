@@ -12,17 +12,16 @@ inputs:
 
 jobs:
   bash-script:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
-      
       - name: check-out
         uses: actions/checkout@v4
 
       - name: Run my Action
         id: run-action
         uses: ./action.yml
-        with: 
+        with:
           name: input.name
 
       - name: Print Output
