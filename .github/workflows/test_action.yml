@@ -4,11 +4,10 @@ name: "test the action"
 
 on:
   workflow_dispatch:
-
-inputs:
-  name:
-    description: "your name"
-    required: true
+    inputs:
+      name:
+        description: "your name"
+        required: true
 
 jobs:
   bash-script:
