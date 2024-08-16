@@ -1,0 +1,29 @@
+name: "test the action"
+#author: "Zheng Bote"
+#description: "test."
+
+on:
+  workflow_dispatch:
+
+inputs:
+  name:
+    description: "your name"
+    required: true
+
+jobs:
+  bash-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check-out
+        uses: actions/checkout@v4
+
+      - name: Run my Action
+        id: run-action
+        uses: ./action.yml
+        with:
+          name: input.name
+
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.bash-script.outputs.message }}"
