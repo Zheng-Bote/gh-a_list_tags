@@ -19,3 +19,6 @@ runs:
       shell: bash
       run: |
         ./test.sh ${{ inputs.name }}
+    - name: get output
+      run: |
+        echo "Output: ${{ env.message }}"
