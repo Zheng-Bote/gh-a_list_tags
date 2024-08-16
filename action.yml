@@ -12,7 +12,10 @@ outputs:
   message:
     description: "the output"
 
-run:
-  shell: bash
-  run: |
-    ./test.sh
+runs:
+  using: "composite"
+  steps:
+    - name: "run bash"
+      shell: bash
+      run: |
+        ./test.sh
