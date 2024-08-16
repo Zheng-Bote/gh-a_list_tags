@@ -12,6 +12,8 @@ outputs:
   message:
     description: "the output"
 
-run: |
-  ./test.sh
-shell: bash
+runs:
+  - name: shell script
+    shell: bash
+    run: |
+      ./test.sh
