@@ -2,13 +2,16 @@ name: "test the action"
 #author: "Zheng Bote"
 #description: "test."
 
+on:
+  workflow_dispatch:
+
 inputs:
   name:
     description: "your name"
     required: true
 
 jobs:
-  bash-script
+  bash-script:
   runs-on: ubuntu-latest
 
     steps:
