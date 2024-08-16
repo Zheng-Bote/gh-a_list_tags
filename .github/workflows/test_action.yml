@@ -21,7 +21,7 @@ jobs:
         id: run-action
         uses: Zheng-Bote/gh-a_list_tags@main
         with:
-          name: input.name
+          name: inputs.name
 
       - name: Print Output
         id: output
