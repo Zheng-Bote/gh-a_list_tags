@@ -20,5 +20,6 @@ runs:
       run: |
         ./test.sh ${{ inputs.name }}
     - name: get output
+      shell: bash
       run: |
         echo "Output: ${{ env.message }}"
