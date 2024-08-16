@@ -10,7 +10,7 @@ inputs:
 
 outputs:
   message:
-    descriptio: "the output"
+    description: "the output"
 
 run: |
   ./test.sh
