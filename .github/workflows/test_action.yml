@@ -19,7 +19,7 @@ jobs:
 
       - name: Run my Action
         id: run-action
-        uses: ./action
+        uses: /gh-a_list_tags
         with:
           name: input.name
 
