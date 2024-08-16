@@ -13,7 +13,6 @@ outputs:
     description: "the output"
 
 runs:
-  - name: shell script
-    shell: bash
-    run: |
-      ./test.sh
+  shell: bash
+  run: |
+    ./test.sh
