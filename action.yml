@@ -1,0 +1,17 @@
+name: "test action"
+author: "Zheng Bote"
+description: "test."
+
+inputs:
+  name:
+    description: "your name"
+    required: true
+    default: "ego"
+
+outputs:
+  message:
+    descriptio: "the output"
+
+run: |
+  ./test.sh
+shell: bash
