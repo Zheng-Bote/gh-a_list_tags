@@ -1,0 +1,28 @@
+name: "test the action remote"
+#author: "Zheng Bote"
+#description: "test."
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "your name"
+        required: true
+
+jobs:
+  bash-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check-out
+        uses: actions/checkout@v4
+
+      - name: Run my Action
+        id: run-action
+        uses: Zheng-Bote/gh-a_list_tags@v0.0.1
+        with:
+          name: ${{ inputs.name }}
+
+      - name: Print Output
+        id: output
+        run: echo "und ${{ env.message }}"
