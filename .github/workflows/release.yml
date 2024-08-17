@@ -32,7 +32,7 @@ jobs:
 
       - name: Create github release
         #if: steps.changelog.outputs.isEmpty == false
-        if: allways()
+        if: always()
         uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
