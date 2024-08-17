@@ -20,7 +20,7 @@ jobs:
       - name: Run my Action
         id: run-action
         #uses: Zheng-Bote/gh-a_list_tags@main
-        uses: ./gh-a_list_tags@dev
+        uses: ./gh-a_list_tags@main
         with:
           name: ${{ inputs.name }}
 
