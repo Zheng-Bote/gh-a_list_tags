@@ -2,6 +2,10 @@ name: "test action"
 author: "Zheng Bote"
 description: "test."
 
+branding:
+  icon: "point"
+  color: "red"
+
 inputs:
   name:
     description: "your name"
@@ -11,11 +15,14 @@ inputs:
 outputs:
   message:
     description: "the output"
+    value: ${{ steps.run-bash.outputs.message}}
 
 runs:
   using: "composite"
   steps:
     - name: "run bash"
+      id: run-bash
       shell: bash
       run: |
         ./test.sh ${{ inputs.name }}
+      timeout-minutes: 5
