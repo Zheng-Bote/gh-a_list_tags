@@ -14,7 +14,7 @@ jobs:
 
       - name: Create changelog
         id: changelog
-        uses: dragonraid/changelog-emitter@v0
+        uses: dragonraid/changelog-emitter@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
