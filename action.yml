@@ -18,4 +18,5 @@ runs:
     - name: "run bash"
       shell: bash
       run: |
+        echo '::info::starting shellscript'
         ./test.sh ${{ inputs.name }}
