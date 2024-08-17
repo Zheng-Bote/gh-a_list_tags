@@ -1,6 +1,10 @@
 name: "changelog"
 # https://github.com/misha-brt/keep-a-changelog-new-release
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   update-changelog:
@@ -11,4 +15,4 @@ jobs:
     - name: Update changelog
       uses: thomaseizinger/keep-a-changelog-new-release@v1
       with:
-        tag: v0.6.0 # You probably want to have this dynamic :)
+        tag: v0.0.1 # You probably want to have this dynamic :)
