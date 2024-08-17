@@ -26,4 +26,4 @@ runs:
       run: |
         echo '::info::starting shellscript'
         ./test.sh ${{ inputs.name }}
-      timeout-minutes: 5
+      #timeout-minutes: 5
