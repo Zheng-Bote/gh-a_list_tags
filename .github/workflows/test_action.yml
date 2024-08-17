@@ -24,6 +24,15 @@ jobs:
         with:
           name: ${{ inputs.name }}
 
+      - run: |
+          if [ ${{ env.MESSAGE }} > 0 ]
+          then
+              echo "::info::funzt"
+              exit 0
+          fi
+        env:
+          MESSAGE: ${{ steps.run-action.outputs.message }}
+
       - name: Print Output
         id: output
-        run: echo "und ${{ env.message }}"
+        run: echo "und ${{ env.MESSAGE }}"
