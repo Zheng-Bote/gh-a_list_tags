@@ -24,7 +24,8 @@ jobs:
         with:
           name: ${{ inputs.name }}
 
-      - run: |
+      - name: Output
+        run: |
           if [ "${{ env.MESSAGE }}" > 0 ]
           then
               echo "::info::funzt"
