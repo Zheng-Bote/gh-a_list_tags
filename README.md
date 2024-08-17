@@ -7,3 +7,5 @@ Github Action create page with listed tags
 ## comments
 
 [skip actions]
+git tag v0.0.3
+git push -f git@github.com:Zheng-Bote/gh-a_page_list-tags --tags
