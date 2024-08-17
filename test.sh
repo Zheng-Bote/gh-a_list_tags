@@ -8,3 +8,7 @@ echo "para: $1"
 echo "current dt: $(date)"
 
 echo "Hello $1"
+msg="Hello $1"
+
+# output 
+echo "message=$(echo $msg)" >> $GITHUB_OUTPUT
