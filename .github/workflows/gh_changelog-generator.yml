@@ -1,0 +1,31 @@
+name: github-changelog-generator
+# https://github.com/tj-actions/github-changelog-generator
+
+on:
+  push:
+    branches:
+      - main
+  pull_request_target:
+    branches:
+      - main
+
+permissions: write-all
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test github-changelog-generator
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+      - name: shellcheck
+        uses: reviewdog/action-shellcheck@v1.26
+      - name: Run github-changelog-generator
+        uses: ./
+        with:
+          output: "HISTORY.md"
+      - name: Run github-changelog-generator with PAT token.
+        uses: ./
+        with:
+          output: "HISTORY.md"
+          token: ${{ secrets.GITHUB_TOKEN }}
