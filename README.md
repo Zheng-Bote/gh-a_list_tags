@@ -8,10 +8,3 @@ Github Action create page with listed tags
 
 [skip actions]
 
-git tag -a v0.0.3 -m "version 0.0.3"
-
-git push -f git@github.com:Zheng-Bote/gh-a_page_lis --tags
-
-ACTIONS_STEP_DEBUG (true|false)
-
-ACTIONS_RUNNER_DEBUG (true|false)
