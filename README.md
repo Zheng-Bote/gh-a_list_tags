@@ -9,6 +9,7 @@ Github Action create page with listed tags
 [skip actions]
 
 git tag -a v0.0.3 - m "version 0.0.3"
+
 git push -f git@github.com:Zheng-Bote/gh-a_page_list-tags --tags
 
 ### Setting the default editor for Git
@@ -16,7 +17,7 @@ git push -f git@github.com:Zheng-Bote/gh-a_page_list-tags --tags
 Pick one:
 
 - git config --global core.editor "vim"
-- export GIT_EDITOR=vim
+- Aexport GIT_EDITOR=vim
 
 git tag -a v0.0.3 -m "version 0.0.3"
 
