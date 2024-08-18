@@ -7,6 +7,8 @@ on:
         description: "Tag to create"
         required: true
 
+permissions: write-all
+
 jobs:
   build:
     runs-on: ubuntu-latest
