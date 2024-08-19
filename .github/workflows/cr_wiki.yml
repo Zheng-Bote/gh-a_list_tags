@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Wiki
+name: add Wiki pages
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v4
       # Additional steps to generate documentation in "Documentation" directory
       - name: Upload Documentation to Wiki
-        uses: Zheng-Bote/gh-a_cr-wiki@main
+        uses: Zheng-Bote/gh-a_cr-wiki@main@v1
         with:
           path: "docs/wiki"
         env:
