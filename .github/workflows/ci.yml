@@ -1,3 +1,4 @@
+name: deploy
 #author: 'robert.zheng'
 
 #description: 'workflow to create an Intranet Webserver NGINX image and push it to AWS ECR Dev as well as to the Github Package Repo'
