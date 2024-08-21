@@ -1,28 +1,36 @@
 name: "get file content"
 
-# https://github.com/maxkomarychev/octions/blob/master/octions/repos/get-contents/README.md
-
 on:
   workflow_dispatch:
+    inputs:
+      name:
+        description: "your name"
+        required: true
 
 permissions:
   contents: read
 
 jobs:
-  read-content:
+  bash-script:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: read file content
-        uses: maxkomarychev/octions/octions/repos/get-contents@master
-        id: read_file_content
+    steps:
+      - name: check-out
+        uses: actions/checkout@v4
+
+      - name: Run my Action
+        id: run-action
+        uses: ./.github/actions/gh-a_get_filecontents@main
+        #uses: ./gh-a_page_list-tags@main
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: ./docs/readme.md
-          ref: main
-      - name: Print outputs
+          name: ${{ inputs.name }}
+
+      - name: Output
         run: |
-          echo ${{ steps.read_file_content.outputs.id }}
-          echo ${{ steps.read_file_content.outputs.number }}
-          echo ${{ steps.read_file_content.outputs.status }}
+          if [ "${{ env.MESSAGE }}" > 0 ]
+          then
+              echo "::info::funzt"
+              exit 0
+          fi
+        env:
+          MESSAGE: "${{ steps.run-action.outputs.message }}"
