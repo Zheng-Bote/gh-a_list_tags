@@ -1,0 +1,28 @@
+name: "get file content"
+
+# https://github.com/maxkomarychev/octions/blob/master/octions/repos/get-contents/README.md
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  read-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: read file content
+        uses: maxkomarychev/octions/octions/repos/get-contents@master
+        id: read_file_content
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: ./docs/readme.md
+          ref: dev
+      - name: Print outputs
+        run: |
+          echo ${{ steps.read_file_content.outputs.id }}
+          echo ${{ steps.read_file_content.outputs.number }}
+          echo ${{ steps.read_file_content.outputs.status }}
