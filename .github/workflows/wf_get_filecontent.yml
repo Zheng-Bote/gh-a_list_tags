@@ -37,7 +37,8 @@ jobs:
           fi
       - name: Print Output
         id: output
-        run: echo "und ${{ env.message }}"
-
+        run: |
+          echo "und ${{ env.MESSAGE }}"
+          echo -e "${Red}*** ::info::funzt: ${{ steps.run-action.outputs.message }}"
         env:
           MESSAGE: "${{ steps.run-action.outputs.message }}"
