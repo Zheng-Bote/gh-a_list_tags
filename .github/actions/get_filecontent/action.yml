@@ -26,3 +26,4 @@ runs:
       run: |
         echo '::info::starting shellscript'
         gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" /repos/Zheng-Bote/gh-a_page_list-tags/contents/docs/readme.md
+        echo "message=$(echo 'here we are')" >> $GITHUB_OUTPUT

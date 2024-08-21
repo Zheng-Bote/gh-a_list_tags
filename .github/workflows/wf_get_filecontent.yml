@@ -35,5 +35,9 @@ jobs:
               echo -e "${Red}*** ::info::funzt"
               exit 0
           fi
+      - name: Print Output
+        id: output
+        run: echo "und ${{ env.message }}"
+
         env:
           MESSAGE: "${{ steps.run-action.outputs.message }}"
