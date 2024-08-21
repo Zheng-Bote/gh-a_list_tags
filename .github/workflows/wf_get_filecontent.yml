@@ -20,7 +20,7 @@ jobs:
 
       - name: Run my Action
         id: run-action
-        uses: zheng-bote/gh-a_page_list-tags/.github/actions/get_filecontent/actions@main
+        uses: zheng-bote/gh-a_page_list-tags/.github/actions/get_filecontent
         #uses: ./gh-a_page_list-tags@main
         with:
           name: ${{ inputs.name }}
