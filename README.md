@@ -6,22 +6,18 @@ Github Action create page with listed tags
 
 ## comments
 
-[skip actions]
+### no action
 
-git tag -a v0.0.3 - m "version 0.0.3"
-
-git push -f git@github.com:Zheng-Bote/gh-a_page_list-tags --tags
+git commit -m "skip this file [skip actions]"
 
 ### Setting the default editor for Git
 
 Pick one:
 
-- git config --global core.editor "vim"
-- Aexport GIT_EDITOR=vim
+- git config --global core.editor "vi"
+- export GIT_EDITOR=vi
 
-git tag -a v0.0.3 -m "version 0.0.3"
-
-git push -f git@github.com:Zheng-Bote/gh-a_page_lis --tags
+### debugging
 
 ACTIONS_STEP_DEBUG (true|false)
 
