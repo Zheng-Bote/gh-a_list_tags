@@ -30,7 +30,7 @@ jobs:
 
       - name: Output
         run: |
-          if [ env.MESSAGE > 0 ]
+          if [ $(env.MESSAGE) > 0 ]
           then
               echo -e "${Red}*** ::info::funzt"
               exit 0
