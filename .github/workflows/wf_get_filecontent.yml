@@ -20,7 +20,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: ./docs/readme.md
-          ref: dev
+          ref: main
       - name: Print outputs
         run: |
           echo ${{ steps.read_file_content.outputs.id }}
