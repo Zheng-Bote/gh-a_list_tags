@@ -32,7 +32,7 @@ jobs:
         run: |
           if [ "${{ env.MESSAGE }}" > 0 ]
           then
-              echo "::info::funzt"
+              echo -e "${Red}*** ::info::funzt"
               exit 0
           fi
         env:
